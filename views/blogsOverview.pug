@@ -1,0 +1,29 @@
+extends baseBlog
+
+block append head
+  link(href='/css/blogOverview.css' rel='stylesheet')
+
+block content
+    section.section-blogs
+      each blog in blogs
+        .row
+          .blog__container
+            .blog__container--imageContent
+              .blog__container--imageContentOverlay  
+              img(src="/img/section-newReleases/Neelkamal Singh.png" alt="")
+            .blog__container--textContent
+              .blog__container--textContent--authorAndDate
+                .date
+                  h3.heading-tertiary= `${new Date(blog.date).toDateString()}`
+                    
+                .author
+                  img.authorImage(src=`${blog.authorImage}` alt="Author Image")
+                  h3.authorName.heading-tertiary= `${blog.authorName}`
+              .blog__container--textContent--title
+                h3.title.heading-tertiary= `${blog.title}`
+                   
+              .blog__container--textContent--timeToRead
+                .timeContainer
+                  h3.time.heading-tertiary= `${blog.readingTime} min read` 
+                .buttonContainer
+                  a.btn.btn--orange(href=`/blog/${blog.slug}`) Read

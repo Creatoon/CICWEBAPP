@@ -1,0 +1,42 @@
+doctype html
+html(lang='en-us')
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      meta(name="theme-color" content="#cf6d17")
+      link(rel="manifest" href="/manifest.webmanifest")
+      link(href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet")
+      link(href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+      link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+      link(rel="stylesheet" href="/vendors/css/ionicons.min.css" type="text/css")
+      link(rel="shortcut icon" type="image/png" href="/img/logos/webapp-72.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-72.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-96.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-128.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-144.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-154.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-192.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-384.png")
+      link(rel="apple-touch-icon" href="/img/logos/webapp-512.png")
+      meta(name="apple-mobile-web-app-status-bar" content="#cf6d17")
+      title CIC Pictures | #{title}
+
+  body
+    .loader
+    // HEADER
+    include _header
+
+    // CONTENT
+    block content
+      h1 This is a placeholder heading
+
+    // FOOTER
+    include _footer
+    script(src="https://unpkg.com/aos@next/dist/aos.js")
+    script.
+      AOS.init();
+    script(src="/js/overview.js")
+    script(src="/js/production/bundle.js")
+    script(src="/js/swOperator.js")
+    

@@ -1,0 +1,36 @@
+extends base
+
+block append head
+  link(href='/css/ask.css' rel='stylesheet')
+
+block imageForBlocks
+        img.header__bgImg.displayBgImage--up600(src="/img/hero-image/hero-query.png", alt="")
+        img.header__bgImg.displayBgImage--down600(src="/img/hero-image/hero-query-1x2x.png" alt="")
+
+block overlays
+    .header__bgImgBox--overlay &nbsp;
+    .header__bgImgBox--text
+        .row
+            h1 ASK YOUR QUERY
+
+block content
+  section.section-signupForm
+      .row
+        .signup-form
+          h2.heading-secondary.signup-heading ASK YOUR QUERY HERE
+          form.form.form--query
+            .form__group
+              label.form__label(for="name") Name
+              input#name.form__input(type="text" placeholder="your name" required="required")
+            .form__group
+              label.form__label(for="email") Email address
+              input#email.form__input(type="email" placeholder="you@example.com" required="required")
+            .form__group
+              label.form__label(for="email") Phone Number
+              input#number.form__input(type="tel" placeholder="+91 ••••••••••" required="required")
+            .form__group.ma-bt-md
+              label.form__label(for="query") Your Query
+              textarea#query.form__input.textAr(cols="1" rows="10" placeholder="Ask Your Query Here" required="required")
+            .form__group
+              button.btn.btn--orange Submit
+

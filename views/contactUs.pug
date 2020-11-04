@@ -1,0 +1,25 @@
+extends base
+
+block append head
+  link(href='/css/policy.css' rel='stylesheet')
+
+block imageForBlocks
+        img.header__bgImg.displayBgImage--up600(src="/img/hero-image/hero-directors.png", alt="")
+        img.header__bgImg.displayBgImage--down600(src="/img/hero-image/hero-directors-1x2x.png" alt="")
+
+block overlays
+    .header__bgImgBox--overlay &nbsp;
+    .header__bgImgBox--text
+        .row
+            h1 Contact Us 
+
+block content
+        section.section-privacyPolicy
+        .row.text-align
+            h1 CIC PICTURES PVT LTD
+            p Metro Pillar Number 115, Khasra No. 846/1,
+            p 3rd Floor, Ghitorni, New Delhi
+            p PIN: 110030
+            p Mobile: +91 8920632506
+            p Email: nitishkr2285@gmail.com
+            p If you are in Delhi, directly search in Uber "CIC PICTURES PVT LTD" and you can reach directly.

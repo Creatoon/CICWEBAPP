@@ -1,0 +1,55 @@
+header.header
+      .navigation
+        nav.navigation__nav
+          .row.navigation__row
+            .navigation__logoBox
+              img.navigation__logo(src="/img/logos/CIC PICTURES_R.png" alt="Cic-Logo")
+              
+            label.navLabelPhone(for="nav__checkbox")
+              i.ion-navicon-round.iconNavCheckBox.iconNavCheckBox--on
+              i.ion-close-round.iconNavCheckBox.iconNavCheckBox--off.displayCheckBox
+            .navigation__list--forMobile.displayForNavigationMobile
+              ul.navigation__listPhone
+                if user
+                  li.navigation__item
+                    img.nav-user-image(src="/img/author/default.jpg" alt="User Image")
+                    a.navigation__link.nav-user-name(href='#')= `${user.name.split(' ')[0]}`
+                  li.navigation__item
+                     i.ion-log-out.iconNav
+                     a(class="navigation__link nav-user-logout" href="logout" id='logoutButton') Logout
+                else
+                  li.navigation__item
+                    i.ion-log-in.iconNav
+                    a.navigation__link(href='/login' id='loginButton') Login
+                li.navigation__item
+                  i.ion-ios-home-outline.iconNav
+                  a.navigation__link(href='/') Home
+                li.navigation__item
+                  i.ion-ios-people-outline.iconNav
+                  a.navigation__link(href="/directors") About Us
+                li.navigation__item
+                  i.ion-ios-albums-outline.iconNav
+                  a.navigation__link(href="/music") Music
+                li.navigation__item
+                  i.ion-ios-book-outline.iconNav
+                  a.navigation__link(href='/blogs') Blogs
+
+            if user
+              .nav--loginBox
+                img.nav-user-image(src="/img/author/default.jpg" alt="User Image")
+                a.navigation__link.nav-user-name(href='#')= `${user.name.split(' ')[0]}`
+              .nav--loginBox
+                a.navigation__link.nav-user-logout(href='logout' id='logoutButton') Logout
+            else
+              .nav--loginBox
+                a.navigation__link(href='/login' id='loginButton') Login
+            ul.navigation__list.displayForNavigation
+              li.navigation__item
+                a.navigation__link(href='/') Home
+              li.navigation__item
+                a.navigation__link(href="/directors") About Us
+              li.navigation__item
+                a.navigation__link(href="/music") Music
+              li.navigation__item
+                a.navigation__link(href='/blogs') Blogs
+                

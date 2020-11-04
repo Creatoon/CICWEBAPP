@@ -1,0 +1,35 @@
+extends base
+
+block append head
+  link(href='/css/director.css' rel='stylesheet')
+
+block imageForBlocks
+        img.header__bgImg.displayBgImage--up600(src="/img/hero-image/hero-directors.png", alt="")
+        img.header__bgImg.displayBgImage--down600(src="/img/hero-image/hero-directors-1x2x.png" alt="")
+
+block overlays
+    .header__bgImgBox--overlay &nbsp;
+    .header__bgImgBox--text
+        .row
+            h1 PROPRIETOR
+
+block content 
+    section.section-directors
+        each director in directors
+                .row
+                    .director-box
+                        .director-box-under--1
+                            .director-imgBox
+                                img(src=`${director.image}` alt="")
+                            .director-nameBox
+                                .bothContainer
+                                    h3.heading-tertiary.director-nameBox--name #{director.name}
+                                        
+                                .bothContainer
+                                    h3.heading-tertiary.director-nameBox--designation #{director.designation}
+                                        
+                        .director-box-under--2
+                            p   #{director.paraOne}
+                            p   #{director.paraTwo}
+                            p   #{director.paraThree}
+                            p   #{director.paraFour}

@@ -1,0 +1,59 @@
+{
+  "name": "CIC PICTURES",
+  "short_name": "CIC PICTURES",
+  "start_url": "https://intense-scrubland-66382.herokuapp.com",
+  "display": "standalone",
+  "background_color": "#cf6d17",
+  "theme_color": "#cf6d17",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/logos/webapp-72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logos/webapp-96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logos/webapp-128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logos/webapp-144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logos/webapp-154.png",
+      "type": "image/png",
+      "sizes": "154x154",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logos/webapp-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logos/webapp-384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logos/webapp-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

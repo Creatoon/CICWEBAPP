@@ -1,0 +1,35 @@
+extends baseBlog
+
+block append head
+  link(href='/css/blog.css' rel='stylesheet')
+
+block content
+    section.section-blogPage
+      .row
+        .blog-container
+          .blog-container__imageContainer
+            img.blog-container__image(src=`${blog.blogImageBig}` alt="")
+          .blog-container__textContainer
+            .blog-container__textContainer--authorAndDate
+              .blog-container__textContainer--author
+                img(src=`${blog.authorImage}` alt="")
+                h3.heading-tertiary #{blog.authorName}
+              .blog-container__textContainer--date
+                h3.heading-tertiary= `Date: ${(new Date(blog.date)).toDateString()}`
+            .blog-container__textContainer--anchorTag
+              a.heading-secondary.blog-container__textContainer--anchorTag--link(href=`${blog.anchorLink}`) Click here to view
+            .blog-container__textContainer--mainContent
+              p.blog-container__textContainer--mainContent--para #{blog.textContent}
+            .blog-container__textContainer--gratitude
+              div
+                h3.heading-tertiary.blog-container__textContainer--gratitude--text
+                  | Thanks for reading!!
+                  br
+                  |                     Click the button to subscribe our youtube channel.
+                h3.heading-tertiary.blog-container__textContainer--gratitude--text
+                  | Best regards
+                h3.heading-tertiary.blog-container__textContainer--gratitude--text
+                  | Nitish Singh
+              .subscribeButton--container
+                .subscribeButton
+                  .g-ytsubscribe(data-channelid="UCtT0cWhG0tcy2NC2-tfr54A" data-layout="full" data-count="default")

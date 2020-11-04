@@ -1,0 +1,16 @@
+extends baseBlog
+
+block append head
+  link(href='/css/login.css' rel='stylesheet')
+
+block content
+  section.section-loginForm
+    .row
+      .login-form
+        h2.heading-secondary.login-heading Enter Your Email
+        form.form.form--email
+            .form__group
+                label.form__label(for='email') Email address
+                input#email.form__input(type='email', placeholder='you@example.com', required)
+            .form__group
+                button.btn.btn--orange Get Reset Email

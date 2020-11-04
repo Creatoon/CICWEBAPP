@@ -1,0 +1,27 @@
+extends baseBlog
+
+block append head
+  link(href='/css/music.css' rel='stylesheet')
+  script(src="https://checkout.razorpay.com/v1/checkout.js")
+
+block content
+    section.section-music 
+      block name
+      .row
+        .upside
+          .section-music__typeList
+            ul.section-music__typeList--list
+              li.section-music__typeList--item
+                a(class="white" href='/music/devotional') Devotional
+              li.section-music__typeList--item
+                a(class="white" href='/music/Ghazals') Ghazals
+              li.section-music__typeList--item
+                a(class="white" href='/music/Bhojpuri') Bhojpuri
+              li.section-music__typeList--item
+                a(class="white" href='/music/karaoke') karaoke
+          .section-music__searchBar
+            input.section-music__searchBar--search#searchBar(type="search" placeholder="Search for songs here")
+      .row
+        .searchContainer
+        .musicContainer
+          

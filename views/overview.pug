@@ -1,0 +1,52 @@
+extends base
+
+block append head
+  link(href='/css/overview.css' rel='stylesheet')
+
+block imageForBlocks
+  each lander in loc.landing
+      img.header__bgImg.displayBgImage--up600(src=`${lander.imagePc}`, alt="")
+      img.header__bgImg.displayBgImage--down600(src=`${lander.imageMobile}` alt="")
+
+block content
+    main
+      section.section-newReleases
+        .row
+          .section-newReleases__Contents(data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="2000")
+            each release in loc.releases
+              .section-newReleases__Contents--textContent
+                .u-center-text.u-margin-bottom-big
+                  h2.heading-secondary #{release.primaryHeading}
+                  p.paragraph.section-newReleases__Contents--textContent--para #{release.paragraphOne}    
+                    br
+                    | &nbsp;
+                    br
+                    | #{release.paragraphTwo} 
+                    br
+                    | &nbsp;
+                    br
+                    | #{release.paragraphThree} 
+              .section-newReleases__Contents--imageContent
+                .section-newReleases__Contents--imageContent--primary
+                  a.primaryImage--youtube-link(target="_blank" href=`${release.primaryImageYoutubeLink}`)
+                    img.section-newReleases__Contents--imageContent--primary--Img(src=`${release.imagePrimary}` alt="New Release Image Front")
+                .section-newReleases__Contents--imageContent--secondary
+                  a.secondaryImage--youtube-link(target="_blank" href=`${release.secondaryImageYoutubeLink}`)
+                    img.section-newReleases__Contents--imageContent--secondary--Img(src=`${release.imageSecondary}` alt="New Release Image Back")
+      each section in loc.sections
+        section(class=`${section.mainClass}` id=`${section.sectioId}` style=`${section.additionalSettings}`)
+          .row
+            .section-picture__Contents(data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="2000")
+              .col-1-of-2.section-picture__Contents--textContent
+                .u-margin-bottom-big
+                  h2.heading-secondary #{section.primaryHeading}
+                  h3.heading-tertiary.paragraph.section-picture__Contents--textContent--heading #{section.secondaryHeading}
+                  p.paragraph.section-picture__Contents--textContent--para #{section.paragraph}<br>
+                    a.heading-secondary.section-picture__Contents--textContent--para--link(href=`${section.anchorLink}` target="_blank")
+                      | VIEW YOUTUBE CHANNEL
+              .col-1-of-2.section-films__Contents--imageContent
+                .section-films__Contents--imageContent--primary
+                  img.section-films__Contents--imageContent--primary--Img(src=`${section.imagePrimary}` alt="New Release Image Back")
+                .section-films__Contents--imageContent--secondary
+                  img.section-films__Contents--imageContent--secondary--Img(src=`${section.imageSecondary}` alt="New Release Image Back")
+      
