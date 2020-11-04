@@ -34,7 +34,7 @@ block content
                   a.secondaryImage--youtube-link(target="_blank" href=`${release.secondaryImageYoutubeLink}`)
                     img.section-newReleases__Contents--imageContent--secondary--Img(src=`${release.imageSecondary}` alt="New Release Image Back")
       each section in loc.sections
-        section(class=`${section.mainClass}` id=`${section.sectioId}` style=`${section.additionalSettings}`)
+        section(class=`${section.mainClass}` id=`${section.sectionId}` style=`${section.additionalSettings}`)
           .row
             .section-picture__Contents(data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="2000")
               .col-1-of-2.section-picture__Contents--textContent

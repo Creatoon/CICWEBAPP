@@ -10,15 +10,15 @@ block content
           .blog__container
             .blog__container--imageContent
               .blog__container--imageContentOverlay  
-              img(src="/img/section-newReleases/Neelkamal Singh.png" alt="")
+              img(src=`${blog.blogImageSmall}` alt="")
             .blog__container--textContent
               .blog__container--textContent--authorAndDate
                 .date
                   h3.heading-tertiary= `${new Date(blog.date).toDateString()}`
                     
                 .author
-                  img.authorImage(src=`${blog.authorImage}` alt="Author Image")
-                  h3.authorName.heading-tertiary= `${blog.authorName}`
+                  img.authorImage(src="/img/logos/webapp-72.png" alt="Author Image")
+                  h3.authorName.heading-tertiary= `Nitish` 
               .blog__container--textContent--title
                 h3.title.heading-tertiary= `${blog.title}`
                    
@@ -26,4 +26,4 @@ block content
                 .timeContainer
                   h3.time.heading-tertiary= `${blog.readingTime} min read` 
                 .buttonContainer
-                  a.btn.btn--orange(href=`/blog/${blog.slug}`) Read
+                  a.btn.btn--orange.btn--blog(href=`/blog/${blog.slug}`) Read

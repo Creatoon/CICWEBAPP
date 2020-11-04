@@ -314,6 +314,14 @@ body {
   margin-right: 1rem;
 }
 
+.authorImage {
+  transform: translateY(-1rem);
+  -webkit-transform: translateY(-1rem);
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -o-transform: translateY(-1rem);
+}
+
 .blog__container--textContent--authorAndDate .author .authorName {
   display: inline-block;
   -webkit-transform: translateY(-100%);
@@ -326,7 +334,7 @@ body {
 }
 
 .blog__container--textContent--authorAndDate .author img {
-  height: 5rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
@@ -987,6 +995,10 @@ html::-webkit-scrollbar-track {
   height: 100%;
   z-index: 9999;
   background: url('/img/loader/loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+}
+
+.btn--blog {
+  padding: 1rem 4rem !important;
 }
 
 /*# sourceMappingURL=main.css.map */
